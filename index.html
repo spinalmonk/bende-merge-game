@@ -9,7 +9,7 @@
 <body>
   <div id="start-screen" class="center">
     <h1>Web Prog Evolutions</h1>
-    <input type="text" id="player-name" placeholder="Add meg a neved" />
+    <input type="text" id="player-name" placeholder="Add meg a neved" value="player"/>
     
     <select id="difficulty">
       <option value="easy">Könnyű (4x4)</option>
@@ -28,6 +28,10 @@
     </div>
     <div id="game-board"></div>
   </div>
+
+  <div id="tooltip" class="tooltip hidden"></div>
+
+  <div id="message" class="message hidden"></div>
 
   <script src="evolutions.js"></script>
   <script src="script.js"></script>

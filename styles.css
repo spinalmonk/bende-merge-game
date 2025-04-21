@@ -69,6 +69,74 @@ input, select, button {
   max-height: 80%;
   object-fit: contain;
   display: block;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(179, 179, 179, 0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: none;
+  max-width: none;
+  width: auto;
+  max-height: none;
+}
+
+.tooltip-img {
+  display: block;
+  max-width: none;
+  max-height: none;
+  width: 400px;
+  height: auto;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+.tooltip.visible {
+  opacity: 1;
+  display: block;
+  transform: translateY(-5px);
+}
+
+.tooltip.hidden {
+  display: none;
+  transform: translateY(0);
+}
+
+.cell.selected {
+  outline: 3px solid #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.5);
+}
+
+.message {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323232;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.message.visible {
+  opacity: 1;
+  bottom: 40px;
+}
+
+.message.hidden {
+  opacity: 0;
   pointer-events: none;
 }
 
