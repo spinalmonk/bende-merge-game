@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Prog Evolutions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="start-screen" class="center">
+    <h1>Web Prog Evolutions</h1>
+    <input type="text" id="player-name" placeholder="Add meg a neved" />
+    
+    <select id="difficulty">
+      <option value="easy">Könnyű (4x4)</option>
+      <option value="medium">Közepes (6x6)</option>
+      <option value="hard">Nehéz (8x8)</option>
+    </select>
+    
+    <button id="start-game">Játék indítása</button>
+  </div>
+
+  <div id="game-screen" class="hidden">
+    <div id="top-bar">
+      <span id="player-info"></span>
+      <button id="draw-button">DRAW</button>
+      <span id="timer">00:00</span>
+    </div>
+    <div id="game-board"></div>
+  </div>
+
+  <script src="evolutions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
